@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timelines",
+  "info": {
+    "singularName": "timeline",
+    "pluralName": "timelines",
+    "displayName": "Timeline",
+    "description": "Timeline untuk SPMB Mutiara Al-Madani"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "phase": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "dateRange": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 10
+    }
+  }
+}

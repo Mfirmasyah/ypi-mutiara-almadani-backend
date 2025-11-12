@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galleries",
+  "info": {
+    "singularName": "gallery",
+    "pluralName": "galleries",
+    "displayName": "Gallery",
+    "description": "Galeri kegiatan sekolah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text", "required": true },
+    "category": {
+      "type": "enumeration",
+      "enum": ["akademik", "ekstrakurikuler", "seni", "olahraga", "umum"],
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "date": { "type": "date", "required": true },
+    "views": { "type": "integer", "default": 0 },
+    "likes": { "type": "integer", "default": 0 }
+  }
+}

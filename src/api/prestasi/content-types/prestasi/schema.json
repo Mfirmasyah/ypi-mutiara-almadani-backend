@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prestasis",
+  "info": {
+    "singularName": "prestasi",
+    "pluralName": "prestasis",
+    "displayName": "Prestasi",
+    "description": "Tabel untuk menyimpan data prestasi siswa per jenjang"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["akademik", "olahraga", "seni", "teknologi", "lainnya"],
+      "required": true,
+      "default": "lainnya"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": ["sekolah", "kota", "provinsi", "nasional", "internasional"],
+      "required": true,
+      "default": "sekolah"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "participants": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "jenjang": {
+      "type": "enumeration",
+      "enum": ["tk", "sd", "smp"],
+      "required": true,
+      "default": "sd"
+    },
+    "year": {
+      "type": "string",
+      "maxLength": 4
+    }
+  }
+}

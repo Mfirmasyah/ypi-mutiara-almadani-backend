@@ -1,0 +1,152 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pendaftars",
+  "info": {
+    "singularName": "pendaftar",
+    "pluralName": "pendaftars",
+    "displayName": "Pendaftar",
+    "description": "Data pendaftar SPMB Mutiara Al-Madani"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nomorPendaftaran": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 20
+    },
+    "namaLengkap": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "jenisKelamin": {
+      "type": "enumeration",
+      "enum": ["Laki-laki", "Perempuan"],
+      "required": true
+    },
+    "tempatLahir": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "tanggalLahir": {
+      "type": "date",
+      "required": true
+    },
+    "agama": {
+      "type": "enumeration",
+      "enum": ["Islam", "Kristen", "Katolik", "Hindu", "Buddha", "Konghucu"],
+      "required": true
+    },
+    "alamat": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500
+    },
+    "telepon": {
+      "type": "string",
+      "required": true,
+      "maxLength": 15
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "namaAyah": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "pekerjaanAyah": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "teleponAyah": {
+      "type": "string",
+      "required": true,
+      "maxLength": 15
+    },
+    "namaIbu": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "pekerjaanIbu": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "teleponIbu": {
+      "type": "string",
+      "required": true,
+      "maxLength": 15
+    },
+    "alamatOrtu": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500
+    },
+    "sekolahAsal": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "alamatSekolah": {
+      "type": "text",
+      "maxLength": 500
+    },
+    "tahunLulus": {
+      "type": "integer",
+      "required": true,
+      "min": 2000,
+      "max": 2030
+    },
+    "nilaiRataRata": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "max": 100
+    },
+    "programPilihan": {
+      "type": "enumeration",
+      "enum": ["TK", "SD", "SMP"],
+      "required": true
+    },
+    "jalurPendaftaran": {
+      "type": "enumeration",
+      "enum": ["reguler", "prestasi", "afirmasi", "perpindahan"],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["menunggu", "diterima", "ditolak"],
+      "default": "menunggu",
+      "required": true
+    },
+    "tanggalDaftar": {
+      "type": "datetime",
+      "required": true
+    },
+    "foto": {
+      "type": "string"
+    },
+    "aktaKelahiran": {
+      "type": "string"
+    },
+    "kartuKeluarga": {
+      "type": "string"
+    },
+    "rapor": {
+      "type": "string"
+    },
+    "suratSehat": {
+      "type": "string"
+    }
+  }
+}
