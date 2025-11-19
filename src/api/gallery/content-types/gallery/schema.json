@@ -16,7 +16,14 @@
     "description": { "type": "text", "required": true },
     "category": {
       "type": "enumeration",
-      "enum": ["akademik", "ekstrakurikuler", "seni", "olahraga", "umum"],
+      "enum": ["akademik", 
+              "ekstrakurikuler", 
+              "seni", 
+              "olahraga", 
+              "umum",
+              "tk",
+              "sd",
+              "smp"],
       "required": true
     },
     "image": {
