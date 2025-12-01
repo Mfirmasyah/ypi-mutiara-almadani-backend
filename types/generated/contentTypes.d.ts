@@ -524,7 +524,16 @@ export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['akademik', 'ekstrakurikuler', 'seni', 'olahraga', 'umum']
+      [
+        'akademik',
+        'ekstrakurikuler',
+        'seni',
+        'olahraga',
+        'umum',
+        'tk',
+        'sd',
+        'smp',
+      ]
     > &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
@@ -697,6 +706,7 @@ export interface ApiPendaftarPendaftar extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     rapor: Schema.Attribute.String;
+    riwayatPenyakit: Schema.Attribute.String;
     sekolahAsal: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -705,7 +715,6 @@ export interface ApiPendaftarPendaftar extends Struct.CollectionTypeSchema {
     status: Schema.Attribute.Enumeration<['menunggu', 'diterima', 'ditolak']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'menunggu'>;
-    suratSehat: Schema.Attribute.String;
     tahunLulus: Schema.Attribute.Integer &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<

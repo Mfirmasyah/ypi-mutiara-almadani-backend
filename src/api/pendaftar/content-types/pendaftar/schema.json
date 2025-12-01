@@ -145,7 +145,7 @@
     "rapor": {
       "type": "string"
     },
-    "suratSehat": {
+    "riwayatPenyakit": {
       "type": "string"
     }
   }
