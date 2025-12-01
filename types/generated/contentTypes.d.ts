@@ -624,7 +624,8 @@ export interface ApiPendaftarPendaftar extends Struct.CollectionTypeSchema {
       ['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha', 'Konghucu']
     > &
       Schema.Attribute.Required;
-    aktaKelahiran: Schema.Attribute.String;
+    aktaKelahiran: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
     alamat: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -648,14 +649,15 @@ export interface ApiPendaftarPendaftar extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
-    foto: Schema.Attribute.String;
+    foto: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     jalurPendaftaran: Schema.Attribute.Enumeration<
       ['reguler', 'prestasi', 'afirmasi', 'perpindahan']
     > &
       Schema.Attribute.Required;
     jenisKelamin: Schema.Attribute.Enumeration<['Laki-laki', 'Perempuan']> &
       Schema.Attribute.Required;
-    kartuKeluarga: Schema.Attribute.String;
+    kartuKeluarga: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -705,8 +707,9 @@ export interface ApiPendaftarPendaftar extends Struct.CollectionTypeSchema {
     programPilihan: Schema.Attribute.Enumeration<['TK', 'SD', 'SMP']> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    rapor: Schema.Attribute.String;
-    riwayatPenyakit: Schema.Attribute.String;
+    rapor: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
+    riwayatPenyakit: Schema.Attribute.Media<'files' | 'images'>;
     sekolahAsal: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

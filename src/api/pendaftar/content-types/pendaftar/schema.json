@@ -134,19 +134,34 @@
       "required": true
     },
     "foto": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
     },
     "aktaKelahiran": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["files", "images"]
     },
     "kartuKeluarga": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["files", "images"]
     },
     "rapor": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["files", "images"]
     },
     "riwayatPenyakit": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["files", "images"]
     }
   }
 }
