@@ -2,28 +2,47 @@
 
 module.exports = {
   routes: [
-    // Custom route untuk search
+    // 1. GET all (find)
     {
       method: 'GET',
-      path: '/pendaftars/search/:field/:value',
-      handler: 'pendaftar.findByField',
-      config: {
-        auth: false,
-        policies: [],
-        middlewares: [],
-      },
+      path: '/pendaftars',
+      handler: 'pendaftar.find',
+      config: { auth: false, policies: [], middlewares: [] }
     },
-
-    // Tambahkan route bawaan untuk create
+    // 2. GET single (findOne)
+    {
+      method: 'GET',
+      path: '/pendaftars/:id',
+      handler: 'pendaftar.findOne',
+      config: { auth: false, policies: [], middlewares: [] }
+    },
+    // 3. POST create (create)
     {
       method: 'POST',
       path: '/pendaftars',
       handler: 'pendaftar.create',
-      config: {
-        auth: false, // biar bisa diakses dari frontend publik
-        policies: [],
-        middlewares: [],
-      },
+      config: { auth: false, policies: [], middlewares: [] }
     },
-  ],
+    // 4. PUT update (update)
+    {
+      method: 'PUT',
+      path: '/pendaftars/:id',
+      handler: 'pendaftar.update',
+      config: { auth: false, policies: [], middlewares: [] }
+    },
+    // 5. DELETE (delete)
+    {
+      method: 'DELETE',
+      path: '/pendaftars/:id',
+      handler: 'pendaftar.delete',
+      config: { auth: false, policies: [], middlewares: [] }
+    },
+    // 6. Custom search (findByField)
+    {
+      method: 'GET',
+      path: '/pendaftars/search/:field/:value',
+      handler: 'pendaftar.findByField',
+      config: { auth: false, policies: [], middlewares: [] }
+    }
+  ]
 };

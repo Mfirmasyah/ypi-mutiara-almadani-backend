@@ -619,6 +619,14 @@ export interface ApiPendaftarPendaftar extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    'content-manager': {
+      visible: true;
+    };
+    'content-type-builder': {
+      visible: true;
+    };
+  };
   attributes: {
     agama: Schema.Attribute.Enumeration<
       ['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha', 'Konghucu']
